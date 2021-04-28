@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
-const path = require("path");
-const Path = require("./scripts/path");
+import path from "path";
+import Path from "./scripts/path";
 export default defineConfig({
   plugins: [reactRefresh()],
   build: {
