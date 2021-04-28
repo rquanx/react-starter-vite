@@ -10,7 +10,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@pnp/sp": "^2.4.0",
     "antd": "^4.15.3",
     "axios": "^0.21.1",
     "compressorjs": "^1.0.7",
@@ -23,8 +22,6 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "sp-rest-proxy": "^3.0.5",
-    "portfinder": "^1.0.28",
     "autoprefixer": "^10.2.5",
     "postcss-import": "^14.0.1",
     "precss": "^4.0.0",
