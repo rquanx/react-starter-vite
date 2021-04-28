@@ -1,0 +1,124 @@
+.sr-list-layout {
+    min-height: 400px;
+    border: 1px solid #d9e3e8;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.sr-list-box {
+    border-top: 2px solid #f3a72f;
+    /* padding: 20px; */
+    padding: 5px 20px 20px;
+}
+
+.sr-list-box table {
+    width: 100%
+}
+
+.sr-list-box table caption {
+    font-size: 16px;
+    color: #000;
+    /* margin-bottom: 20px; */
+    display: none;
+}
+
+.sr-list-box table th,
+.sr-list-box table td,
+.sr-list-box table caption {
+    text-align: left;
+}
+
+.sr-list-box table th,
+.sr-list-box table td {
+    padding: 15px 5px;
+    color: black;
+    font-size: 14px;
+}
+
+.sr-list-box table th:first-child,
+.sr-list-box table td:first-child {
+    padding: 15px 5px 15px 0px;
+}
+
+.sr-list-box table th:last-child,
+.sr-list-box table td:last-child {
+    padding: 15px 0px 15px 5px;
+}
+
+
+.sr-list-box table td {
+    color: #666;
+    border-top: 1px solid #e4eaec;
+}
+
+.sr-list-box table td button {
+    background: none;
+    color: #055ba6;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sr-list-box table td button:last-child {
+    margin-right: 0;
+}
+
+.sr-list-box table td div.sr-file-name {
+    color: #055ba6;
+    cursor: pointer;
+}
+
+.sr-nodata-text{
+    text-align: center;
+    color: #666 !important;
+    background-color: white;
+}
+.sr-list-box .checkbox{
+    width: 100px;
+}
+.sr-list-box label { /*flex布局让子元素水平垂直居中*/
+    display: flex;
+    align-items: center;
+}
+
+.sr-list-box input[type=checkbox],input[type=radio] {
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    position: relative;
+    margin-right: 25px;
+}
+
+.sr-list-box input[type=checkbox]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #ddd;
+}
+
+.sr-list-box input[type=checkbox]:checked:before{
+    content: '';
+    display: table;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    opacity: 1;
+    position: absolute;
+    z-index: 8;
+    top: 1px;
+    left: 4px;
+    height: 9px;
+}
+
+.sr-list-box input[type=checkbox]:checked:after {
+    border: 1px solid #1890ff;
+    background-color: #1890ff;
+}
