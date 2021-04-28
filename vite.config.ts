@@ -2,51 +2,47 @@ import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import path from "path";
 import Path from "./scripts/path";
-import RollupPluginSPRestProxy from "./scripts/rollup-plugin-sp-rest-proxy";
-let rollupPluginSPRestProxy = new RollupPluginSPRestProxy();
+import RollupPluginSPRestProxy from "rollup-plugin-sp-rest-proxy";
 
-export default defineConfig({
-  server: {
-    proxy: {
-      ...rollupPluginSPRestProxy.viteProxySetting(),
+export default defineConfig(
+  RollupPluginSPRestProxy.mergeViteConfig({
+    plugins: [reactRefresh()],
+    build: {
+      assetsDir: "static",
+      sourcemap: true,
     },
-  },
-  plugins: [reactRefresh(), rollupPluginSPRestProxy.rollupPlugin()],
-  build: {
-    assetsDir: "static",
-    sourcemap: true,
-  },
-  resolve: {
-    alias: [
-      {
-        find: "@src",
-        replacement: Path.src,
-      },
-      {
-        find: "@components",
-        replacement: path.resolve(Path.src, "components"),
-      },
-      {
-        find: "@services",
-        replacement: path.resolve(Path.src, "services"),
-      },
-      {
-        find: "@config",
-        replacement: path.resolve(Path.src, "config"),
-      },
-      {
-        find: "@assets",
-        replacement: path.resolve(Path.src, "assets"),
-      },
-    ],
-  },
-  css: {
-    postcss: {
-      plugins: [
-        require("postcss-import"),
-        require("precss"), // 让css支持类似sass的语法,vscode在设置json中增加 "files.associations": { "*.css": "scss" }
-        require("autoprefixer"),
+    resolve: {
+      alias: [
+        {
+          find: "@src",
+          replacement: Path.src,
+        },
+        {
+          find: "@components",
+          replacement: path.resolve(Path.src, "components"),
+        },
+        {
+          find: "@services",
+          replacement: path.resolve(Path.src, "services"),
+        },
+        {
+          find: "@config",
+          replacement: path.resolve(Path.src, "config"),
+        },
+        {
+          find: "@assets",
+          replacement: path.resolve(Path.src, "assets"),
+        },
       ],
     },
-  },
-});
+    css: {
+      postcss: {
+        plugins: [
+          require("postcss-import"),
+          require("precss"), // 让css支持类似sass的语法,vscode在设置json中增加 "files.associations": { "*.css": "scss" }
+          require("autoprefixer"),
+        ],
+      },
+    },
+  })
+);
