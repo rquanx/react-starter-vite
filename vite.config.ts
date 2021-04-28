@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
-const path = require("path");
-const Path = require("./scripts/path");
-const { RollupPluginSPRestProxy } = require("./scripts/rollup-plugin-sp-rest-proxy");
+import path from "path";
+import Path from "./scripts/path";
+import RollupPluginSPRestProxy from "./scripts/rollup-plugin-sp-rest-proxy";
 let rollupPluginSPRestProxy = new RollupPluginSPRestProxy();
+
 export default defineConfig({
   server: {
     proxy: {
