@@ -3,10 +3,23 @@ import reactRefresh from "@vitejs/plugin-react-refresh";
 import path from "path";
 import Path from "./scripts/path";
 import RollupPluginSPRestProxy from "rollup-plugin-sp-rest-proxy";
+import legacy from "@vitejs/plugin-legacy";
+
+const polyfill = false;
 
 export default defineConfig(
   RollupPluginSPRestProxy.mergeViteConfig({
-    plugins: [reactRefresh()],
+    plugins: [
+      reactRefresh(),
+      polyfill
+        ? legacy({
+            targets: {
+              chrome: "58",
+              ie: "11",
+            },
+          })
+        : null,
+    ],
     build: {
       assetsDir: "static",
       sourcemap: true,

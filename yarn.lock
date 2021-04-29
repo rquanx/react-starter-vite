@@ -222,6 +222,11 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/standalone@^7.13.12":
+  version "7.13.17"
+  resolved "https://registry.npmjs.org/@babel/standalone/-/standalone-7.13.17.tgz#921b82a11a80ce824589516736d629efc53297aa"
+  integrity sha512-Y9P198T45MIIu+AvGOCcjsdKl79+BCL2nA+6ODA5p/DhGzymvzaTgtzvNcjZDcJmbPszcmohjLLgvma3tmvVtg==
+
 "@babel/template@^7.12.13":
   version "7.12.13"
   resolved "https://registry.npm.taobao.org/@babel/template/download/@babel/template-7.12.13.tgz#530265be8a2589dbb37523844c5bcb55947fb327"
@@ -385,15 +390,6 @@
     "@pnp/odata" "2.4.0"
     tslib "2.2.0"
 
-"@rollup/pluginutils@^3.0.9":
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-3.1.0.tgz#706b4524ee6dc8b103b3c995533e5ad680c02b9b"
-  integrity sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==
-  dependencies:
-    "@types/estree" "0.0.39"
-    estree-walker "^1.0.1"
-    picomatch "^2.2.2"
-
 "@sindresorhus/is@^2.0.0":
   version "2.1.1"
   resolved "https://registry.nlark.com/@sindresorhus/is/download/@sindresorhus/is-2.1.1.tgz#ceff6a28a5b4867c2dd4a1ba513de278ccbe8bb1"
@@ -425,11 +421,6 @@
   version "2.5.3"
   resolved "https://registry.npm.taobao.org/@types/core-js/download/@types/core-js-2.5.3.tgz?cache=0&sync_timestamp=1613378229538&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fcore-js%2Fdownload%2F%40types%2Fcore-js-2.5.3.tgz#d2f307f708f897f875d312501e3b4a2fd4481d41"
   integrity sha1-0vMH9wj4l/h10xJQHjtKL9RIHUE=
-
-"@types/estree@0.0.39":
-  version "0.0.39"
-  resolved "https://registry.npmjs.org/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
-  integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
 "@types/global-agent@2.1.0":
   version "2.1.0"
@@ -582,6 +573,17 @@
     "@uifabric/set-version" "^7.0.24"
     prop-types "^15.7.2"
     tslib "^1.10.0"
+
+"@vitejs/plugin-legacy@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.npmjs.org/@vitejs/plugin-legacy/-/plugin-legacy-1.3.2.tgz#e93db3020daf08a3585b08de648e5c486ff20e4d"
+  integrity sha512-nAUHCK5/UaaL9blYiyPE2tNWIHp/QZuQSuiJrRTEH47F9s4/rCWj4IGWpZSNcEbnsTubp7hxnkh9XkSgPT3Dkg==
+  dependencies:
+    "@babel/standalone" "^7.13.12"
+    core-js "^3.8.2"
+    magic-string "^0.25.7"
+    regenerator-runtime "^0.13.7"
+    systemjs "^6.8.3"
 
 "@vitejs/plugin-react-refresh@^1.3.1":
   version "1.3.3"
@@ -743,11 +745,6 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.nlark.com/asynckit/download/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
-
-atob@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
-  integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 autoprefixer@^10.2.5:
   version "10.2.5"
@@ -1093,6 +1090,11 @@ core-js@^3.6.5:
   resolved "https://registry.nlark.com/core-js/download/core-js-3.11.0.tgz#05dac6aa70c0a4ad842261f8957b961d36eb8926"
   integrity sha1-BdrGqnDApK2EImH4lXuWHTbriSY=
 
+core-js@^3.8.2:
+  version "3.11.1"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.11.1.tgz#f920392bf8ed63a0ec8e4e729857bfa3d121c525"
+  integrity sha512-k93Isqg7e4txZWMGNYwevZL9MiogLk8pd1PtwrmFmi8IBq4GXqUaVW/a33Llt6amSI36uSjd0GWwc9pTT9ALlQ==
+
 core-util-is@1.0.2:
   version "1.0.2"
   resolved "https://registry.nlark.com/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -1201,11 +1203,6 @@ debug@~4.1.0:
   integrity sha1-O3ImAlUQnGtYnO4FDx1RYTlmR5E=
   dependencies:
     ms "^2.1.1"
-
-decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
 decompress-response@^5.0.0:
   version "5.0.0"
@@ -1367,11 +1364,6 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.nlark.com/escape-string-regexp/download/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha1-FLqDpdNz49MR5a/KKc9b+tllvzQ=
-
-estree-walker@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/estree-walker/-/estree-walker-1.0.1.tgz#31bc5d612c96b704106b477e6dd5d8aa138cb700"
-  integrity sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==
 
 etag@~1.8.1:
   version "1.8.1"
@@ -1967,6 +1959,13 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+magic-string@^0.25.7:
+  version "0.25.7"
+  resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
+  integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
+  dependencies:
+    sourcemap-codec "^1.4.4"
+
 matcher@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/matcher/download/matcher-3.0.0.tgz#bd9060f4c5b70aa8041ccc6f80368760994f30ca"
@@ -2292,11 +2291,6 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.nlark.com/performance-now/download/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
-
-picomatch@^2.2.2:
-  version "2.2.3"
-  resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
-  integrity sha512-KpELjfwcCDUb9PeigTs2mBJzXUPzAuP2oPcA989He8Rte0+YUAjw1JVedDhuTKPkHjSYzMN3npC9luThGYEKdg==
 
 pify@^2.3.0:
   version "2.3.0"
@@ -3190,7 +3184,7 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.7"
   resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
   integrity sha1-ysLazIoepnX+qrrriugziYrkb1U=
@@ -3265,14 +3259,6 @@ roarr@^2.15.3:
     json-stringify-safe "^5.0.1"
     semver-compare "^1.0.0"
     sprintf-js "^1.1.2"
-
-rollup-plugin-sourcemaps@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.npmjs.org/rollup-plugin-sourcemaps/-/rollup-plugin-sourcemaps-0.6.3.tgz#bf93913ffe056e414419607f1d02780d7ece84ed"
-  integrity sha512-paFu+nT1xvuO1tPFYXGe+XnQvg4Hjqv/eIhG8i5EspfYYPBKL57X7iVbfv55aNVASg3dzWvES9dmWsL2KhfByw==
-  dependencies:
-    "@rollup/pluginutils" "^3.0.9"
-    source-map-resolve "^0.6.0"
 
 rollup-plugin-sp-rest-proxy@^1.0.4:
   version "1.0.4"
@@ -3466,14 +3452,6 @@ socket.io@^2.4.1:
     socket.io-client "2.4.0"
     socket.io-parser "~3.4.0"
 
-source-map-resolve@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.npmjs.org/source-map-resolve/-/source-map-resolve-0.6.0.tgz#3d9df87e236b53f16d01e58150fc7711138e5ed2"
-  integrity sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==
-  dependencies:
-    atob "^2.1.2"
-    decode-uri-component "^0.2.0"
-
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "https://registry.nlark.com/source-map/download/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
@@ -3483,6 +3461,11 @@ source-map@^0.6.1:
   version "0.6.1"
   resolved "https://registry.nlark.com/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+
+sourcemap-codec@^1.4.4:
+  version "1.4.8"
+  resolved "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
+  integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
 sp-rest-proxy@^3.0.5:
   version "3.0.5"
@@ -3582,6 +3565,11 @@ supports-color@^7.1.0:
   integrity sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=
   dependencies:
     has-flag "^4.0.0"
+
+systemjs@^6.8.3:
+  version "6.8.3"
+  resolved "https://registry.npmjs.org/systemjs/-/systemjs-6.8.3.tgz#67e27f49242e9d81c2b652b204ae54e8bfcc75a3"
+  integrity sha512-UcTY+FEA1B7e+bpJk1TI+a9Na6LG7wFEqW7ED16cLqLuQfI/9Ri0rsXm3tKlIgNoHyLHZycjdAOijzNbzelgwA==
 
 tcomb@^3.2.21:
   version "3.2.29"
