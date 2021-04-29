@@ -2,8 +2,21 @@ import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import path from "path";
 import Path from "./scripts/path";
+import legacy from "@vitejs/plugin-legacy";
+
+const polyfill = false;
 export default defineConfig({
-  plugins: [reactRefresh()],
+  plugins: [
+    reactRefresh(),
+    polyfill
+      ? legacy({
+          targets: {
+            chrome: "58",
+            ie: "11",
+          },
+        })
+      : null,
+  ],
   build: {
     assetsDir: "static",
     sourcemap: true,
