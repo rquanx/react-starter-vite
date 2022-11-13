@@ -1,0 +1,94 @@
+.slider-container {
+  position: relative;
+}
+
+.slider-canvas {
+  margin-bottom: 30px;
+}
+.slider-loading-text {
+  display: inline;
+}
+.slider-loading {
+  position: absolute;
+
+  /*
+  loading铺满整个图片区域
+  */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* 
+    align-items属性是针对单独的每一个flex子项起作用，它的基本单位是每一个子项，在所有情况下都有效果（当然要看具体的属性值）。
+    align-content属性是将flex子项作为一个整体起作用，它的基本单位是子项构成的行，只在两种情况下有效果：
+        ①子项多行且flex容器高度固定 
+        ②子项单行，flex容器高度固定且设置了flex-wrap:wrap;
+*/
+  align-items: center;
+  background-color: #ddd;
+}
+
+.slider-loading-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  background: url(http://cdn.dooring.cn/dr/icon12.png);
+  background-size: 32px;
+  animation: loading-icon-rotate 0.8s linear infinite;
+}
+
+@keyframes loading-icon-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.slider-block-container {
+  border: #ddd solid 1px;
+  position: relative;
+}
+
+.slider-block-background {
+  background: #d1e9fe;
+  border: 0 solid skyblue;
+}
+
+.slider-block-background-active {
+  border-width: 1px;
+}
+
+.slider {
+  border: #ddd solid 1px;
+  position: absolute;
+  pointer-events: auto;
+
+  /*
+  光标边手
+  */
+  cursor: grab;
+
+  /*
+  拖动方块文字不可选中
+  */
+  user-select: none;
+}
+
+.slider:hover,
+.slider-active {
+  background: skyblue;
+  color: #fff;
+}
+
+/**
+滑块初始位置，同时根据拖动修改left
+**/
+.block {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
