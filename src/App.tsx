@@ -15,7 +15,7 @@ import Error from "@components/ErrorBoundary/Error";
 import { initializeIcons } from "office-ui-fabric-react/lib/Icons";
 import ErrorBoundary from "@components/ErrorBoundary";
 initializeIcons("../assets/fonts/uifabric/");
-const Home = lazy(() => loadable(import(/* webpackChunkName: "Home" */ './pages/home')));
+import Home from './pages/home'
 
 window.isLoaded = true;
 export interface Info {
