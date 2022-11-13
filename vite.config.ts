@@ -4,7 +4,7 @@ import path from "path";
 import Path from "./scripts/path";
 import legacy from "@vitejs/plugin-legacy";
 
-const polyfill = false;
+const polyfill = true;
 export default defineConfig({
   plugins: [
     reactRefresh(),
